@@ -157,15 +157,16 @@ if __name__ == "__main__":
     parser.add_argument("--height", type = int, default = 300, help = "height images")
     parser.add_argument("--batch", type = int, default = 40, help = "batch size")
     parser.add_argument("--epochs", type = int, default = 30, help = "epochs")
-    parser.add_argument("--model", type = str, default = "lenet", help = "chosen model, lenet, resnet, vgg")
-    parser.add_argument("--pos_file", type = str, default = 'ImageFilteringData/positive_examples/*')
-    parser.add_argument("--neg_file", type = str, default = 'ImageFilteringData/negative_examples/*')
-    parser.add_argument("--folder_ims", type = str, default = 'ImageFilteringData/')
+    parser.add_argument("--pos_file", type = str, default = 'data/positive_examples/*')
+    parser.add_argument("--neg_file", type = str, default = 'data/negative_examples/*')
+    parser.add_argument("--folder_ims", type = str, default = 'data/')
     parser.add_argument("--resize", type = bool, default = False)
     parser.add_argument("--file_data", type = bool, default = True)
-    parser.add_argument("--partialfile_t", type = str, default = "ImageFilteringData/train_test_divisions/train_load_3000.json")
-    parser.add_argument("--partialfile_v", type = str, default = "ImageFilteringData/train_test_divisions/val_load_3000.json")
+    parser.add_argument("--partialfile_t", type = str, default = "data/train_test_splits/train_load_3000.json")
+    parser.add_argument("--partialfile_v", type = str, default = "data/train_test_splits/val_load_3000.json")
     parser.add_argument("--model_save", type = str, default = "trained_models/")
+    parser.add_argument("--model", type = str, default = "lenet", choices=["lenet", "resnet", "vgg"],
+            help = "chosen model, lenet, resnet, vgg")
 
 
     args = parser.parse_args()
