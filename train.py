@@ -97,7 +97,11 @@ def train(net, criterion, optimizer, transform, train_load, val_load, device, ar
         test_losses.append(test_loss)
         test_accuracies.append(correct/total*100)
 
-        torch.save(net.state_dict(), args.model_save + args.model + "_test_" + str(epoch))
+        try:
+            torch.save(net.state_dict(), args.model_save + args.model + "_test_" + str(epoch))
+        except:
+            os.mkdir(args.model_save)
+            torch.save(net.state_dict(), args.model_save + args.model + "_test_" + str(epoch))
 
     return train_losses, train_accuracies, test_losses, test_accuracies
 
