@@ -3,8 +3,8 @@ from glob import glob
 import numpy as np 
 
 path_fine_grained = "../images/neg_examples_apart"
-pos = glob("ImageFilteringData/positive_examples/*")
-neg = set([i.split('/')[-1] for i in glob("ImageFilteringData/negative_examples/*")])
+pos = glob("data/positive_examples/*")
+neg = set([i.split('/')[-1] for i in glob("data/negative_examples/*")])
 
 def get_data(name, amount_val):
     images = [i.split('/')[-1] for i in glob(path_fine_grained + "/" + name + "/*")]
