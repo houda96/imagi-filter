@@ -3,7 +3,7 @@
 ## Introduction
 
 This repository contains code to train, use and evaluate binary classification models to tag images as naturally occurring/photographic or not.
-With this code you can train both coarse and fine-grained classification models as described in [our paper](#).
+With this code you can train both coarse and fine-grained classification models as described in [our paper](https://arxiv.org/abs/2008.09152).
 
 This research is derived from and extends [Houda Alberts](https://github.com/houda96)' master thesis.
 
@@ -72,5 +72,5 @@ To be added.
 
 If you found this repository useful, please cite our paper.
 
-[Paper bibtex description](#)
+[ImagiFilter: A resource to enable the semi-automatic mining of images at scale](https://arxiv.org/abs/2008.09152)
 
