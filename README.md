@@ -7,6 +7,9 @@ With this code you can train both coarse and fine-grained classification models 
 
 This research is derived from and extends [Houda Alberts](https://github.com/houda96)' master thesis.
 
+## License
+Apache License 2.0. 
+
 ## Environment
 
 Create an environment in Python 3.6 and install the requirements as below.
